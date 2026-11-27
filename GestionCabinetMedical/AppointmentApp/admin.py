@@ -1,9 +1,9 @@
 from django.contrib import admin
-from AppointmentApp.models import Appointment
+from AppointmentApp.models import *
 
-@admin.site.register(Appointment)
+@admin.register(Appointment)
 class AppointmentAdminPersonaliser(admin.ModelAdmin):
     list_display = ('reason', 'appointment_date', 'status')
-    list_filter = ('status', 'reson')
+    list_filter = ('status', 'reason')
     
 # Register your models here.
